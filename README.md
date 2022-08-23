@@ -2,8 +2,9 @@
 This is similar to tail-f command
 
 
-This is real time log monitoring which has been build using 
+This is real time log monitoring This will retrieve the last 10 line of file effeicently</br>
 
+It has been Build using
 Python</br>
 Celery</br>
 Redis</br>
