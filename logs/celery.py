@@ -16,7 +16,7 @@ app.conf.beat_schedule={
     'every-2-seconds' : {
         'task':'monitor.task.send_notification',
         'schedule':2,
-        'args':("/Users/suresh/Desktop/logs/log.txt",)
+        'args':("File Path",)
     }
 }
 
