@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Data from sheet</h1>
+    <div id="content">
+
+    </div>
+    <script>
+        const roomName = "logs"
+
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/'
+            + roomName
+            + '/'
+        );
+
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            textdata=data.message
+            var content = document.getElementById("content");
+            for(var i=0; i< textdata.length;i++){
+	            content.innerHTML += '<center>'+textdata[i] +'</center>'+ '<br>';
+            }
+        };
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+    </script>
+</body>
+</html>
