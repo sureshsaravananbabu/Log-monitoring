@@ -5,7 +5,7 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 from asgiref.sync import sync_to_async
 
 class MonitorConsumer(AsyncWebsocketConsumer):
-    path="/Users/suresh/Desktop/logs/log.txt"
+    path="File Path"
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.redis=RedisClient()
